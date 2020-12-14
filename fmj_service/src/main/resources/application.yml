@@ -1,0 +1,24 @@
+server:
+  port: 8084
+dubbo:
+  application:
+    name: fmj_service
+  scan:
+    base-packages: com.hs.fmj_service.srvice.impl
+  registry:
+    address: zookeeper://8.131.115.31:2181
+#    address: zookeeper://192.168.25.138:2181
+  protocol:
+    name: dubbo
+    port: 20881
+    serialization: hessian2
+  provider:
+    retries: 0
+    timeout: 10000
+spring:
+  datasource:
+    url: jdbc:mysql:///demo20?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+

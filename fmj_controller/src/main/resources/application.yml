@@ -1,0 +1,24 @@
+server:
+  port: 8086
+dubbo:
+  application:
+    name: fmj_controller
+    qos-enable: true
+    qos-accept-foreign-ip: false
+    qos-port: 44444
+  scan:
+    base-packages: com.hs.fmj_controller.controller
+  registry:
+#    address: zookeeper://192.168.25.138:2181
+      address: zookeeper://8.131.115.31:2181
+  consumer:
+    timeout: 10000
+    check: true
+    retries: 2
+spring:
+  datasource:
+    url: jdbc:mysql:///demo20?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+
