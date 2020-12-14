@@ -12,7 +12,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  * 2020/12/11
  */
 @Configuration
-public class CrosConfig implements WebMvcConfigurer {
+public class CorsConfig implements WebMvcConfigurer {
     private CorsConfiguration corsConfig() {
         CorsConfiguration corsConfiguration = new CorsConfiguration();
         /*

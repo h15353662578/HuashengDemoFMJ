@@ -12,7 +12,7 @@ import springfox.documentation.oas.annotations.EnableOpenApi;
  */
 @EnableDubbo
 @EnableOpenApi
-@CrossOrigin
+@CrossOrigin(origins = {"http://localhost:8081"})
 @SpringBootApplication
 @MapperScan("com.hs.fmj_service")
 public class FmjController {

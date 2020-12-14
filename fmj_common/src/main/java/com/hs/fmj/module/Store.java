@@ -8,6 +8,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
  * @author 华生
  * 2020/12/11
@@ -15,7 +17,7 @@ import lombok.Data;
 @Data
 @ApiModel(value = "商品实体")
 @TableName("store")
-public class Store {
+public class Store implements Serializable {
 
     @ApiModelProperty(value = "主键ID")
     @TableId(type = IdType.AUTO)
