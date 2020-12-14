@@ -20,8 +20,10 @@ import org.springframework.web.bind.annotation.*;
 public class OrderController {
 
 
-    @Reference(protocol = "fmj_service" ,interfaceClass = OrderService.class)
+//    @Reference(protocol = "fmj_service" ,interfaceClass = OrderService.class)
+    @Reference
     private OrderService orderService;
+
 
     @ApiOperation("/查询用户订单")
     @GetMapping("/findByOrderId")

@@ -10,7 +10,8 @@ dubbo:
     base-packages: com.hs.fmj_controller.controller
   registry:
 #    address: zookeeper://192.168.25.138:2181
-      address: zookeeper://8.131.115.31:2181
+#      address: zookeeper://8.131.115.31:2181
+    address: zookeeper://39.97.230.167:2181
   consumer:
     timeout: 10000
     check: true
